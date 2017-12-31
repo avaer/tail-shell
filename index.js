@@ -17,15 +17,18 @@ const createReadStream = (filePath, {tail = null} = {}) => {
     cp.kill();
 
     cp.stdout.unpipe(s);
-    cp.stderr.unpipe(s);
   };
 
   const cp = childProcess.spawn(cmd[0], cmd.slice(1));
+  cp.on('exit', code => {
+    if (code !== null && code !== 0) {
+      s.emit('error', new Error('tail process exited with nonzero status code: ' + code));
+    }
+  });
   cp.on('error', err => {
     s.emit('error', err);
   });
   cp.stdout.pipe(s);
-  cp.stderr.pipe(s);
 
   return s;
 };
