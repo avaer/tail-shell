@@ -1,6 +1,6 @@
 {
   "name": "tail-shell",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shell out node file tailing for unix/windows",
   "main": "index.js",
   "scripts": {
