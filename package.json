@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/modulesio/tail-native.git"
+    "url": "git+https://github.com/modulesio/tail-shell.git"
   },
   "author": "Avaer Kazmer <a@modules.io>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/modulesio/tail-native/issues"
+    "url": "https://github.com/modulesio/tail-shell/issues"
   },
-  "homepage": "https://github.com/modulesio/tail-native#readme"
+  "homepage": "https://github.com/modulesio/tail-shell#readme"
 }
